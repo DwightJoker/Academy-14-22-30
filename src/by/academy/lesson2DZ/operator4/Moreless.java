@@ -2,7 +2,7 @@ package by.academy.lesson2DZ.operator4;
 
 import java.util.Scanner;
 
-public class moreless {
+public class Moreless {
 
     public static void main(String[] args) {
 

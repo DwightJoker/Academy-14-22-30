@@ -1,7 +1,7 @@
 package by.academy.lesson2DZ.calculator;
 import java.util.Scanner;
 
-public class calculator {
+public class Calculator {
 
     public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
 package by.academy.lesson2DZ.operator5;
 
-public class name {
+public class Name {
 
     public static void main(String[] args) {
 

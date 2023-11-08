@@ -1,7 +1,7 @@
 package by.academy.lesson2DZ.operator1;
 import java.util.Scanner;
 
-public class kratnost {
+public class Kratnost {
     public static void main(String[] args) {
         Scanner kr = new Scanner(System.in);
         System.out.print("Enter number 1: ");

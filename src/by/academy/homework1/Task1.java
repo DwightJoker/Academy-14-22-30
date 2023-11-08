@@ -1,10 +1,8 @@
 package by.academy.homework1;
 
-import java.security.spec.RSAOtherPrimeInfo;
-
 import java.util.Scanner;
 
-public class task1 {
+public class Task1 {
 
     public static void main(String[] args) {
 

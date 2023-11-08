@@ -14,8 +14,8 @@ public class Book {
         this.pages = pages;
     }
 
-    public void info() {
-            System.out.println(title+ "\n" + author + "\n" + year + "\n" + pages);
-    }
+    //public void info() {
+         //   System.out.println(title+ "\n" + author + "\n" + year + "\n" + pages);
+    //}
 
 }
