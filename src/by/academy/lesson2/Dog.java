@@ -1,9 +1,10 @@
 package by.academy.lesson2;
 
 public class Dog {
-    String nickname;
-    int age;
-    String color;
+    public String nickname;
+    public int age;
+    public String color;
+    public int grow;
 
     public Dog() {
         super();
@@ -12,14 +13,24 @@ public class Dog {
         this.nickname = nickname;
     }
 
+    public Dog(String nickname, int age) {
+        this.nickname = nickname;
+        this.age = age;
+
+    }
     public Dog(String nickname, int age, String color) {
         this.nickname = nickname;
         this.age = age;
         this.color = color;
+
     }
 
     public void eat() {
         System.out.println(color + "собака по кличке" + nickname + "Ест");
+    }
+    public void grow() {
+        System.out.println("собака по кличке" + nickname);
+                age++;
     }
     public void sleep() {
         System.out.println(color +  "собака по кличке"  + nickname + "Спит");
