@@ -16,10 +16,9 @@ public class Task2 {
         enteredWords = sc.nextLine();
         String[] words = enteredWords.split(" ");
 
-
         String result = " ";
 
-        if(words.length == wordsAmountToProcess) {
+        if (words.length == wordsAmountToProcess) {
 
             for (int i = 0; i <= wordsAmountToProcess - 1; i++) {
 

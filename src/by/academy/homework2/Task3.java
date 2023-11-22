@@ -17,7 +17,7 @@ public class Task3 {
         int firstWordSize = firstWord.length();
         int secondWordSize = secondWord.length();
 
-        if(firstWordSize %2 == 0 && secondWordSize %2 == 0) {
+        if (firstWordSize % 2 == 0 && secondWordSize % 2 == 0) {
 
             int firstHalfOfFirstWordSize = firstWordSize / 2;
             int secondHalfOfSecondWordSize = secondWordSize / 2;
@@ -28,7 +28,7 @@ public class Task3 {
             System.out.println(firstHalfOfFirstWord + secondHalfOfSecondWord);
 
         } else {
-            System.out.println("Ошибка");
+            System.out.println("Ошибка, введите слово с чётным количеством букв");
         }
 
         sc.close();

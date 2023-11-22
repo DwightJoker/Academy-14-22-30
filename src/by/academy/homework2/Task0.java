@@ -1,6 +1,7 @@
 package by.academy.homework2;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task0 {
@@ -25,6 +26,7 @@ public class Task0 {
                 int[] arr = new int[n];
 
                 String[] arrItems = scanner.nextLine().split(" ");
+                System.out.println(Arrays.toString(arr));
 
                 for (int i = 0; i < n; i++) {
                     arr[i] = Integer.parseInt(arrItems[i]);
