@@ -12,16 +12,14 @@ public class Task0 {
             static int pairs (int k, int[] arr) {
 
                 int pairsCount = 0;
-                Set<Integer> set = new HashSet<>();
-                for (int num : arr) {
-                    set.add(num);
-                }
-                for (int num : arr) {
-                    if (set.contains(num + k)) {
-                        pairsCount++;
+
+                for (int i = 0; i < arr.length - 1; i++) {
+                    for (int j = i + 1; j < arr.length; j++) {
+                        if (Math.abs(arr[i] - arr[j]) == k) {
+                            pairsCount++;
+                        }
                     }
                 }
-
                 return pairsCount;
             }
 

@@ -28,10 +28,11 @@ public class Task1 {
         }
 
         String mainArrayString = String.valueOf(wordOne);
+        String secondaryArrayString = String.valueOf(wordTwo);
 
-        for (char x : wordTwo) {
+        for (char x : wordOne) {
 
-            if (!mainArrayString.contains(String.valueOf(x))) {
+            if (!secondaryArrayString.contains(String.valueOf(x))) {
                 return false;
             }
         }
