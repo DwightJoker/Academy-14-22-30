@@ -4,7 +4,7 @@ import by.academy.lesson8.deal.Product;
 
 public class Cola extends Product {
 
-    String sugar;
+    private String sugar;
 
     public Cola(String name, double price, double quantity) {
         super(name, price, quantity);

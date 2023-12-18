@@ -5,16 +5,10 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Deal {
-    User seller;
-    User buyer;
-    Product[] product;
-    LocalDate date;
-
-    //boolean checkBuyerMoney();
-    //void transferMoney(seller, buyer);
-    //void printBill();
-    //double calculateFullPrice();
-
+    protected User seller;
+    protected User buyer;
+    protected Product[] product;
+    protected LocalDate date;
 
     public Deal(User seller, User buyer, Product[] product, LocalDate date) {
         this.seller = seller;
@@ -54,23 +48,11 @@ public class Deal {
     public void setDate(LocalDate date) {
         this.date = date;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Deal deal = (Deal) o;
-        return Objects.equals(seller, deal.seller) && Objects.equals(buyer, deal.buyer) && Arrays.equals(product, deal.product) && Objects.equals(date, deal.date);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = Objects.hash(seller, buyer, date);
-        result = 31 * result + Arrays.hashCode(product);
-        return result;
-    }
     private void transferMoney(User seller, User buyer) {
     }
+    private void printBill() {
+    }
+
     public double calculateFullPrice() {
         if (product == null) {
             return 0;
@@ -94,10 +76,31 @@ public class Deal {
         }
     }
 
-    public void printBill() {
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Deal deal = (Deal) o;
+        return Objects.equals(seller, deal.seller) && Objects.equals(buyer, deal.buyer) && Arrays.equals(product, deal.product) && Objects.equals(date, deal.date);
     }
 
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(seller, buyer, date);
+        result = 31 * result + Arrays.hashCode(product);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Deal{" +
+                "seller=" + seller +
+                ", buyer=" + buyer +
+                ", product=" + Arrays.toString(product) +
+                ", date=" + date +
+                '}';
+    }
 }
 

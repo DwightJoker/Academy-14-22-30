@@ -1,11 +1,12 @@
 package by.academy.lesson8.deal;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
-public class Product {
-    String name;
-    double price;
-    double quantity;
+public abstract class Product {
+    protected String name;
+    protected double price;
+    protected double quantity;
 
 
     public Product(String name, double price, double quantity) {
@@ -13,7 +14,6 @@ public class Product {
         this.price = price;
         this.quantity = quantity;
     }
-
     public String getName() {
         return name;
     }
@@ -51,6 +51,28 @@ public class Product {
             return 0.75;
         }
     }
+    //public abstract double discount();
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.price, price) == 0 && Double.compare(product.quantity, quantity) == 0 && Objects.equals(getName(), product.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), price, quantity);
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }
 

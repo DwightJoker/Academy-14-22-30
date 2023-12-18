@@ -5,9 +5,9 @@ import java.util.Objects;
 
 public class User {
 
-    String name;
-    double money;
-    LocalDate dateOfBirth;
+    protected String name;
+    protected double money;
+    protected LocalDate dateOfBirth;
 
 
     public User(String name, double money, LocalDate dateOfBirth) {
@@ -44,17 +44,16 @@ public class User {
         return money >= price;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return Double.compare(user.money, money) == 0 && Objects.equals(name, user.name) && Objects.equals(dateOfBirth, user.dateOfBirth);
+        return Double.compare(user.getMoney(), getMoney()) == 0 && Objects.equals(getName(), user.getName()) && Objects.equals(getDateOfBirth(), user.getDateOfBirth());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, money, dateOfBirth);
+        return Objects.hash(getName(), getMoney(), getDateOfBirth());
     }
 }
