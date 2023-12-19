@@ -16,6 +16,12 @@ public class Deal {
         this.product = product;
         this.dateTime = dateTime;
     }
+    public void deadlineDate(){
+        LocalDate today = LocalDate.now();
+        LocalDate deadline = today.plusDays(10);
+        System.out.println("Дедлайн " + deadline);
+
+    }
 
     public User getSeller() {
         return seller;
@@ -76,12 +82,7 @@ public class Deal {
             System.out.println("У покупателя нет столько денег: " + price);
         }
     }
-    public void deadlineDate(){
-        LocalDate today = LocalDate.now();
-        LocalDate deadline = today.plusDays(10);
-        System.out.println("Дедлайн " + deadline);
 
-    }
 
 }
 

@@ -1,13 +1,13 @@
 package by.academy.homework3.products;
 
-public class Cucumber extends Product{
+public class Vegetable extends Product{
 
 
     private String name;
     private int quantity;
     private int price = 100;
 
-    public Cucumber(String name, int quantity) {
+    public Vegetable(String name, int quantity) {
         super();
         this.name = name;
         this.quantity = quantity;

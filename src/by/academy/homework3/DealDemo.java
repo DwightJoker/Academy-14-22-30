@@ -1,7 +1,6 @@
 package by.academy.homework3;
 
 import by.academy.homework3.validation.BelorussianPhoneValidator;
-import by.academy.homework3.validation.DateValidator;
 import by.academy.homework3.validation.EmailValidator;
 
 import java.util.Scanner;
@@ -30,7 +29,7 @@ public class DealDemo{
         String sellerMail = seller.nextLine();
         EmailValidator emailSellerValidator = new EmailValidator();
         boolean isSellerEmailValid = emailSellerValidator.validate(sellerMail);
-        while (! isSellerEmailValid) {
+        while (!isSellerEmailValid) {
             System.out.println("Неверно указан email, повторите попытку");
             sellerMail = seller.nextLine();
             isSellerEmailValid = emailSellerValidator.validate(sellerMail);
@@ -70,67 +69,10 @@ public class DealDemo{
         String buyerMail = buyer.nextLine();
         EmailValidator emailBuyerValidator = new EmailValidator();
         boolean isBuyerEmailValid = emailBuyerValidator.validate(buyerMail);
-        while (! isBuyerEmailValid) {
+        while (!isBuyerEmailValid) {
             System.out.println("Неверно указан email, повторите попытку");
             buyerMail = buyer.nextLine();
             isBuyerEmailValid = emailBuyerValidator.validate(buyerMail);
         }
-
-//        Cart cart = new Cart();
-//
-//        cart.add(new Car());
-//        cart.add(new Boat());
-//        cart.add(new Cucumber());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        LocalDate localDate1 = DataValidate.getDate("22/11/2022");
-//        if (localDate1 != null){
-//            System.out.println(localDate1);
-////            System.out.println(localDate1.getDayOfMonth() + "\n" + localDate1.getMonth().toString() + '\n' + localDate1.getYear());
-//        }else{
-//            System.out.println("Error");
-//        }
-//
-//        DataValidate v = new DataValidate();
-//        System.out.println(v.validate("dd/MM/yyyy"));
-//        System.out.println(v.validate("22/10/2022"));
-
     }
 }
