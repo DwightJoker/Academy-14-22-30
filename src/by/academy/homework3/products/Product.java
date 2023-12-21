@@ -1,29 +1,28 @@
 package by.academy.homework3.products;
 
+import java.util.Objects;
+
 public abstract class Product {
-    private String category;
-    private String name;
-    private double price;
-    private double quantity;
+    String category;
+    double price;
+    double quantity;
 
-
-    public Product(String category, String name, double price) {
+    public Product(String category, double price, double quantity) {
         this.category = category;
-        this.name = name;
         this.price = price;
+        this.quantity = quantity;
     }
-
 
     public Product() {
         super();
     }
 
     public String getName() {
-        return name;
+        return category;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.category = category;
     }
 
     public double getQuantity() {
@@ -47,14 +46,22 @@ public abstract class Product {
     }
 
     public abstract double discount();
-//    {
-//        if (quantity < 10){
-//            return 1;
-//        } else if (quantity < 20) {
-//            return 0.8;
-//        } else {
-//            return 0.75;
-//        }
-//    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.getPrice(), getPrice()) == 0 && Double.compare(product.getQuantity(), getQuantity()) == 0 && Objects.equals(category, product.category);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(category, getPrice(), getQuantity());
+    }
+
+    @Override
+    public String toString() {
+        return "Тип товара: " + category + " " + "Цена " + price + " " + "Количество " + quantity;
+    }
 }

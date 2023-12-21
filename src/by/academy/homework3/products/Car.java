@@ -1,13 +1,14 @@
 package by.academy.homework3.products;
 
-public class Car extends Product{
+public class Car extends Product {
 
+    private String brand;
+    private double engine;
 
-    private String Brand;
-
-    public Car(String category, String name, double price, String brand) {
-        super(category, name, price);
-        Brand = brand;
+    public Car(String category, double price, double quantity, String brand, double engine) {
+        super(category, price, quantity);
+        this.brand = brand;
+        this.engine = engine;
     }
 
     public Car() {
@@ -16,23 +17,17 @@ public class Car extends Product{
     @Override
     public double discount() {
 
-        if (super.getQuantity() < 2){
+        if (super.getQuantity() < 5) {
             return 1;
-        } else if (super.getQuantity() < 5) {
+        } else if (super.getQuantity() < 7) {
             return 0.8;
         } else {
             return 0.75;
         }
     }
-}
 
-//    switch (scanner produktov) {
-//        case cucumber: cart.add(new Car());
-//            break;
-//        case audi:
-//            break;
-//        case boat:
-//            break;
-//        default:
-//            break;
-//    }
+    @Override
+    public String toString() {
+        return "Тип товара: " + category + " " + "Производитель " + brand + " " + "Цена " + price + " " + "Количество " + quantity + " " + "Объем двигателя " + engine;
+    }
+}

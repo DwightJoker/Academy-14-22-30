@@ -16,8 +16,4 @@ public class BelorussianPhoneValidator implements Validator {
         return null;
     }
 
-    @Override
-    public boolean gPV(String string) {
-        return Validator.super.gPV(string);
-    }
 }

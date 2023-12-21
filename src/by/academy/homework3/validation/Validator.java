@@ -9,10 +9,8 @@ public interface Validator {
 
     Pattern getPattern();
 
-    default boolean gPV(String string) {
+    default boolean validation(String string) {
         return getPattern().matcher(string).matches();
     }
-
-
 
 }
