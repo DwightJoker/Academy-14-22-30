@@ -1,6 +1,6 @@
 package by.academy.homeworks.homework3.products;
 
-import by.academy.lesson14.Producer;
+import by.academy.lessons1to15.lesson14.Producer;
 
 @Producer(startYear = 1, producerCountry = " ", producerFullName = " ")
 public class Boat extends Product {

@@ -1,8 +1,6 @@
 package by.academy.homeworks.homework3.products;
 
-import by.academy.lesson14.Producer;
-
-import java.lang.annotation.Target;
+import by.academy.lessons1to15.lesson14.Producer;
 
 @Producer(startYear = 0, producerCountry = " ", producerFullName = " ")
 public class Car extends Product {
