@@ -14,6 +14,13 @@ public class HeavyBox {
         this.name = name;
     }
 
+    public HeavyBox(double height, double width, double depth, double weight) {
+        this.height = height;
+        this.width = width;
+        this.depth = depth;
+        this.weight = weight;
+    }
+
     public double getWeight() {
         return weight;
     }

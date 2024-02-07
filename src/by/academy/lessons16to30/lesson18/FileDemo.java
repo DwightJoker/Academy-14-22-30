@@ -1,4 +1,4 @@
-package by.academy.lesson18;
+package by.academy.lessons16to30.lesson18;
 
 import java.io.*;
 

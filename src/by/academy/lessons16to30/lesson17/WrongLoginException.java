@@ -1,4 +1,4 @@
-package by.academy.lesson17;
+package by.academy.lessons16to30.lesson17;
 
 public class WrongLoginException extends Exception{
 
